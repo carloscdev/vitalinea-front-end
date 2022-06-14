@@ -19,7 +19,7 @@ export const Header = () => {
       <img data-aos="fade-up" className="fresa fresa-4" src={Fresa4} alt="Fresas" />
       <section className="header__container container">
         <figure className="header__image">
-          <img src={Vitalinea} alt="Vitalinea" />
+          <img width="220" height="auto" src={Vitalinea} alt="Vitalinea" />
         </figure>
         <div>
           <div className="header__tags">

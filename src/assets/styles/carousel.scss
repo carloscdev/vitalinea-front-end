@@ -1,0 +1,40 @@
+.carousel {
+  background-image: url(../images/bg-familia-vitalinea.png);
+  background-position: center;
+  background-size: content;
+  padding: 4rem 0;
+  text-align: center;
+  &__container {
+    display: grid;
+    align-items: end;
+    padding: 4rem 0;
+    gap: 3rem;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    color: var(--primary-color);
+    font-weight: 300;
+    font-size: 1.1rem;
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    font-weight: 300;
+  }
+  @media (min-width: 768px) {
+    padding: 8rem 0;
+    h3 {
+      font-size: 4.4rem;
+    }
+    &__container {
+      font-size: 2.2rem;
+    }
+  }
+}

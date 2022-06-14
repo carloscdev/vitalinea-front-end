@@ -1,0 +1,11 @@
+.button {
+  background-color: var(--primary-color);
+  height: 4rem;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 768px) {
+    max-width: 240px;
+  }
+}

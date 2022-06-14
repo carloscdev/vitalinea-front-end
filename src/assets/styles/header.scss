@@ -1,0 +1,121 @@
+.header {
+  background-image: linear-gradient(to bottom, var(--pink-color-light), var(--pink-color));
+  position: relative;
+  &__container {
+    padding: 8rem 0 10rem;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--white-color);
+    bottom: -15rem;
+    right: 0;
+    left: 0;
+    height: 20rem;
+    transform: skewY(5deg);
+  }
+  &__image {
+    padding-top: 3rem;
+    margin-bottom: -5rem;
+    text-align: center;
+    img {
+      width: 22rem;
+    }
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      li {
+        border-radius: 1.2rem;
+        border: 1px solid lighten(black, 60%);
+        padding: 0.2rem 1rem;
+        transition: background 0.5s ease-out;
+        cursor: pointer;
+        &.active, &:hover {
+          background-color:var(--red-color-transparent);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      font-weight: 300;
+    }
+    &--logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+  }
+  &__arrow {
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--primary-color);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2.5rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 1;
+    animation: floating 3s ease-in-out infinite;
+  }
+  @media (min-width: 768px) {
+    &__container {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      align-items: end;
+      padding: 10rem 0 14rem;
+      gap: 5rem;
+      .title {
+        font-size: 4rem;
+      }
+      .text {
+        max-width: 55rem;
+        font-size: 1.7rem;
+      }
+    }
+    &__tags {
+      ul {
+        gap: 2.4rem;
+      }
+    }
+    &::after {
+      height: 25rem;
+      transform: skewY(4deg);
+      bottom: -18rem;
+    }
+    &__image {
+      img {
+        width: 25rem;
+      }
+    }
+    &__description {
+      gap: 3rem;
+      &--logos {
+        justify-content: start;
+      }
+    }
+    &__arrow {
+      bottom: 5rem;
+    }
+  }
+}

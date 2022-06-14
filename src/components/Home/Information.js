@@ -1,13 +1,35 @@
 import React from 'react';
 import { Title, Text } from '../';
+import Fresa5 from "../../assets/images/img-fresas-5.png";
+import Fresa6 from "../../assets/images/img-fresas-6.png";
+import Fresa7 from "../../assets/images/img-fresas-7.png";
+import Fresa8 from "../../assets/images/img-fresas-8.png";
+import Fresa9 from "../../assets/images/img-fresas-9.png";
 import '../../assets/styles/information.scss';
 
 export const Information = () => {
+  const stats = [
+    { title: 'Contenido energético kJ/kcal', value: '413,2/97,9' },
+    { title: 'Proteínas (g)', value: '5.3' },
+    { title: 'Grasas (lípidos) (g)', value: '2.1' },
+    { title: 'Carbohidratos (Hidratos de carbono) (g)', value: '12.4' },
+    { title: 'Azúcares (g)', value: '7.7' },
+    { title: 'Azúcares añadidos (g)', value: '0.1' },
+    { title: 'Fibra dietética(g)', value: '0.0' },
+    { title: 'Sodio (mg)', value: '92.7' },
+    { title: 'Calcio (g)', value: '199.6' },
+    { title: '%VNR*', value: '22' },
+  ]
   return (
     <main className="information" id="information">
+      <img data-aos="fade-up" className="fresa fresa-5" src={Fresa5} alt="Fresas" />
+      <img data-aos="fade-up" className="fresa fresa-6" src={Fresa6} alt="Fresas" />
+      <img data-aos="fade-up" className="fresa fresa-7" src={Fresa7} alt="Fresas" />
+      <img data-aos="fade-up" className="fresa fresa-8" src={Fresa8} alt="Fresas" />
+      <img data-aos="fade-up" className="fresa fresa-9" src={Fresa9} alt="Fresas" />
       <section className="information__container container">
         <Title>Información nutrimental</Title>
-        <div className="information__description">
+        <div data-aos="fade-right"  className="information__description">
           <ul>
             <li>Vitalínea® Bebible Guayaba 217gr</li>
             <li>Valor promedio por porción de 217gr</li>
@@ -22,47 +44,15 @@ export const Information = () => {
             cultivos lácticos.
           </Text>
         </div>
-        <div className="information__stats">
-          <p>
-            <span>Contenido energético kJ/kcal</span>
-            <span>413,2/97,9</span>
-          </p>
-          <p>
-            <span>Proteínas (g)</span>
-            <span>5.3</span>
-          </p>
-          <p>
-            <span>Grasas (lípidos) (g)</span>
-            <span>2.1</span>
-          </p>
-          <p>
-            <span>Carbohidratos (Hidratos de carbono) (g)</span>
-            <span>12.4</span>
-          </p>
-          <p>
-            <span>Azúcares (g)</span>
-            <span>7.7</span>
-          </p>
-          <p>
-            <span>Azúcares añadidos (g)</span>
-            <span>0.1</span>
-          </p>
-          <p>
-            <span>Fibra dietética(g)</span>
-            <span>0.0</span>
-          </p>
-          <p>
-            <span>Sodio (mg)</span>
-            <span>92.7</span>
-          </p>
-          <p>
-            <span>Calcio (g)</span>
-            <span>199.6</span>
-          </p>
-          <p>
-            <span>%VNR*</span>
-            <span>22</span>
-          </p>
+        <div data-aos="fade-left"  className="information__stats">
+          {
+            stats.map((item, index) => (
+              <p key={index}>
+                <span>{item.title}</span>
+                <span>{item.value}</span>
+              </p>
+            ))
+          }
         </div>
       </section>
     </main>

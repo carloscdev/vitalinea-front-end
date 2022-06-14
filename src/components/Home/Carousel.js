@@ -7,7 +7,7 @@ import '../../assets/styles/carousel.scss';
 export const Carousel = () => {
   return (
     <section className="carousel">
-      <h3>LA FAMILIA VITALÍNEA</h3>
+      <h3 data-aos="fade-down" >LA FAMILIA VITALÍNEA</h3>
       <div className="carousel__container container">
         <div>
           <img src={VitalineaGriego} alt="Vitalinea Griego" />

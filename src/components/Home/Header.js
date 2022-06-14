@@ -3,12 +3,20 @@ import Vitalinea from "../../assets/images/img-bote-fresa.png"
 import SelloAvalado from "../../assets/images/img-sello-avalado.png";
 import Healthy from "../../assets/images/img-100-kcal.png";
 import Arrow from "../../assets/images/arrow.png";
+import Fresa1 from "../../assets/images/img-fresas-1.png";
+import Fresa2 from "../../assets/images/img-fresas-2.png";
+import Fresa3 from "../../assets/images/img-fresas-3.png";
+import Fresa4 from "../../assets/images/img-fresas-4.png";
 import { Title, CustomButton, Text } from '../';
 import "../../assets/styles/header.scss"
 
 export const Header = () => {
   return (
     <header className="header">
+      <img className="fresa fresa-1" src={Fresa1} alt="Fresas" />
+      <img className="fresa fresa-2" src={Fresa2} alt="Fresas" />
+      <img data-aos="fade-up" className="fresa fresa-3" src={Fresa3} alt="Fresas" />
+      <img data-aos="fade-up" className="fresa fresa-4" src={Fresa4} alt="Fresas" />
       <section className="header__container container">
         <figure className="header__image">
           <img src={Vitalinea} alt="Vitalinea" />
